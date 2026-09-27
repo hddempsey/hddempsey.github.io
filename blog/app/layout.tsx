@@ -3,23 +3,18 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
-  },
-  description: 'This is my portfolio.',
+  title: 'Harrison Dempsey | Senior Software Engineer',
+  description: 'Harrison Dempsey is a New York City based senior software engineer focused on backend systems, Java, and AI integration.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Harrison Dempsey | Senior Software Engineer',
+    description: 'Backend engineering, Java, and thoughtful AI integration in New York City.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Harrison Dempsey',
     locale: 'en_US',
     type: 'website',
   },
@@ -36,30 +31,22 @@ export const metadata: Metadata = {
   },
 }
 
-const cx = (...classes) => classes.filter(Boolean).join(' ')
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
-        GeistSans.variable,
-        GeistMono.variable
-      )}
-    >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+    <html lang="en" data-theme="dark" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "try{document.documentElement.dataset.theme=localStorage.getItem('theme')==='light'?'light':'dark'}catch(e){}" }} />
+      </head>
+      <body>
+        <div className="site-shell" id="top">
           <Navbar />
-          {children}
+          <main id="main-content">{children}</main>
           <Footer />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+        </div>
       </body>
     </html>
   )
