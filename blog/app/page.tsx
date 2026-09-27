@@ -20,7 +20,7 @@ export default function Page() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow"><span className="status-dot" /> NYC BASED / OPEN TO CONNECT</p>
-          <h1 id="hero-title">Harrison<br /><span>Dempsey.</span></h1>
+          <h1 id="hero-title">Harrison<br /><span>Dempsey</span></h1>
           <div className="current-role">
             <span className="current-role-label">CURRENT ROLE</span>
             <p>Senior Software Engineer at <span className="grubhub-name">Grubhub</span><span className="role-divider"> / </span><span className="wonder-name">Wonder</span></p>
@@ -43,7 +43,7 @@ export default function Page() {
       <section className="section about-section" id="about" aria-labelledby="about-title">
         <div className="section-heading">
           <span className="section-index">01 / ABOUT</span>
-          <h2 id="about-title">Engineering with<br /><em>purpose.</em></h2>
+          <h2 id="about-title">Engineering with<br /><em>purpose</em></h2>
         </div>
         <div className="about-content">
           <p className="lead">
@@ -65,7 +65,7 @@ export default function Page() {
       <section className="section experience-section" aria-labelledby="experience-title">
         <div className="section-heading compact-heading">
           <span className="section-index">THE PATH SO FAR</span>
-          <h2 id="experience-title">Experience<span className="accent-period">.</span></h2>
+          <h2 id="experience-title">Experience</h2>
         </div>
         <div className="experience-list">
           {experience.map((item) => (
@@ -82,12 +82,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
-        <div className="section-heading">
-          <span className="section-index">02 / PORTFOLIO</span>
-          <h2 id="portfolio-title">Selected work<span className="accent-period">.</span></h2>
-          <p>Case studies are on their way. Here’s where I’ll share the work behind the work.</p>
-        </div>
+      <section className="section portfolio-section" id="portfolio" aria-label="Portfolio">
+        <span className="section-index">02 / PORTFOLIO</span>
         <div className="project-grid">
           {[1, 2].map((number) => (
             <article className="project-card" key={number}>
@@ -106,7 +102,7 @@ export default function Page() {
         <span className="section-index">03 / CONTACT</span>
         <div className="contact-content">
           <div>
-            <h2 id="contact-title">Let’s make<br /><em>something great.</em></h2>
+            <h2 id="contact-title">Let’s build<br /><em>something great together</em></h2>
             <p>Have an idea, a question, or just want to say hello? My inbox is open.</p>
           </div>
           <a className="contact-arrow" href="mailto:harrisonddempsey@gmail.com" aria-label="Email Harrison Dempsey">↗</a>

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <a className="footer-brand" href="#top">HD<span>.</span></a>
+      <a className="footer-brand" href="#top">HD</a>
       <p>© {new Date().getFullYear()} Harrison Dempsey</p>
       <div className="footer-links">
         <a href="https://github.com/hddempsey" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>

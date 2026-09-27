@@ -3,7 +3,7 @@ import { ThemeToggle } from './theme-toggle'
 export function Navbar() {
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Harrison Dempsey, back to top">HD<span>.</span></a>
+      <a className="brand" href="#top" aria-label="Harrison Dempsey, back to top">HD</a>
       <nav className="site-nav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
